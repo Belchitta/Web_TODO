@@ -27,6 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+<<<<<<< HEAD
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+
+=======
+>>>>>>> 71cf598206b139ac30a5b8dd15ead79c66e0062a
 AUTH_USER_MODEL = 'users.TodoUser'
 
 # Application definition
@@ -40,11 +48,19 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'users',
+<<<<<<< HEAD
+    'corsheaders',
+=======
+>>>>>>> 71cf598206b139ac30a5b8dd15ead79c66e0062a
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+<<<<<<< HEAD
+    'corsheaders.middleware.CorsMiddleware',
+=======
+>>>>>>> 71cf598206b139ac30a5b8dd15ead79c66e0062a
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
