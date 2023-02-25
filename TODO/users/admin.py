@@ -5,5 +5,5 @@ from users.models import TodoUser
 
 
 @admin.register(TodoUser)
-class BookAdmin(ModelAdmin):
+class TodoUser(ModelAdmin):
     pass

@@ -20,7 +20,7 @@ from rest_framework.routers import DefaultRouter, SimpleRouter
 from users.views import TodoUserModelViewSet
 
 
-router = SimpleRouter()
+router = DefaultRouter()
 router.register('users', TodoUserModelViewSet)
 
 
