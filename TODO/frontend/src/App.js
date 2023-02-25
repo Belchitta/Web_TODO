@@ -11,7 +11,7 @@ import Navbar from './components/Menu.js';
 import axios from 'axios';
 
 
-const DOMAIN = 'http://127.0.0.1:8001/api/'
+const DOMAIN = 'http://127.0.0.1:8000/api/'
 const get_url = (url) => `${DOMAIN}${url}`
 
 class App extends React.Component {
