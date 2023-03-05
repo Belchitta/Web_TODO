@@ -17,7 +17,7 @@ import ToDoList from './components/ToDo.js'
 import LoginForm from './components/Auth.js'
 
 
-const DOMAIN = 'http://127.0.0.1:8001/api/'
+const DOMAIN = 'http://127.0.0.1:8000/api/'
 const get_url = (url) => `${DOMAIN}${url}`
 
 
@@ -81,7 +81,7 @@ class App extends React.Component {
 
         axios.get(get_url('users/'), {headers})
             .then(response => {
-                //console.log(response.data)
+//                console.log(response.data)
                 this.setState({users: response.data})
             }).catch(error =>
 
@@ -90,7 +90,7 @@ class App extends React.Component {
 
         axios.get(get_url('projects/'), {headers})
             .then(response => {
-                //console.log(response.data)
+//                console.log(response.data)
                 this.setState({projects: response.data})
             }).catch(error =>
             console.log(error)
@@ -98,7 +98,7 @@ class App extends React.Component {
 
         axios.get(get_url('todos/'), {headers})
             .then(response => {
-                //console.log(response.data)
+//                console.log(response.data)
                 this.setState({todos: response.data})
             }).catch(error =>
             console.log(error)
