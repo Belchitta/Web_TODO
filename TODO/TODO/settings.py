@@ -143,14 +143,15 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'users.TodoUser'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
+# from rest_framework.permissions import DjangoModelPermissionsOrAnonReadOnly
+
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'djangorestframework_camel_case.render.CamelCaseJSONRenderer',
         'djangorestframework_camel_case.render.CamelCaseBrowsableAPIRenderer',
     ),
-
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated'
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ],
 
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -166,5 +167,5 @@ REST_FRAMEWORK = {
         'djangorestframework_camel_case.parser.CamelCaseJSONParser',
     ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 100
+    'PAGE_SIZE': 10
 }
