@@ -24,11 +24,29 @@ from rest_framework.routers import DefaultRouter, SimpleRouter
 from TodoLists.views import ToDoViewSet, ProjectViewSet
 from users.views import TodoUserViewSet
 from rest_framework.authtoken import views
+<<<<<<< HEAD
+=======
+
+# from rest_framework_simplejwt.views import (
+#     TokenObtainPairView,
+#     TokenRefreshView,
+#     TokenVerifyView
+# )
+=======
+>>>>>>> main
+>>>>>>> 61f256aea00144b6b28399642f06426cd796928f
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
     TokenVerifyView
 )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> parent of b0be2de... Lesson_9_Done
+>>>>>>> main
+>>>>>>> 61f256aea00144b6b28399642f06426cd796928f
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -51,6 +69,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('api/', include(router.urls)),
+<<<<<<< HEAD
     path('api-auth-token/', views.obtain_auth_token),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
@@ -61,4 +80,21 @@ urlpatterns = [
          name='schema-redoc'),
     re_path(r'^swagger(?P<format>\.json|\.yaml)$',
             schema_view.without_ui(cache_timeout=0), name='schema-json'),
+=======
+<<<<<<< HEAD
+    path('api-auth-token/', views.obtain_auth_token),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+=======
+<<<<<<< HEAD
+    # path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+=======
+    path('api-auth-token/', views.obtain_auth_token),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+>>>>>>> parent of b0be2de... Lesson_9_Done
+>>>>>>> main
+    # path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
+>>>>>>> 61f256aea00144b6b28399642f06426cd796928f
 ]
