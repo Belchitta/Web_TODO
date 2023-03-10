@@ -2,7 +2,6 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
-<<<<<<< HEAD
 # class TodoUser(AbstractUser):
 #     first_name = models.CharField(max_length=64)
 #     last_name = models.CharField(max_length=64)
@@ -17,13 +16,6 @@ class TodoUser(AbstractUser):
     is_superuser = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
 
-=======
-class TodoUser(AbstractUser):
-    first_name = models.CharField(max_length=64)
-    last_name = models.CharField(max_length=64)
-    birthday_year = models.PositiveIntegerField(default='0000')
-    email = models.EmailField(unique=True)
-
     def __str__(self):
         return f'{self.first_name} | {self.last_name}'
->>>>>>> 39d6cd02cb365d215e78c7e8b3a2b86a8d929d8c
+

@@ -3,9 +3,6 @@ import {
     Link,Redirect
 } from "react-router-dom";
 
-import {
-    Link
-} from "react-router-dom";
 
 function NavbarItem({name, href}) {
     return (
