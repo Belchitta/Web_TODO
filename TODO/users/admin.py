@@ -3,3 +3,7 @@ from users.models import TodoUser
 
 
 admin.site.register(TodoUser)
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
