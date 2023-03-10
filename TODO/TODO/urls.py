@@ -21,9 +21,7 @@ from rest_framework.routers import DefaultRouter, SimpleRouter
 from TodoLists.views import ToDoViewSet, ProjectViewSet
 from users.views import TodoUserViewSet
 from rest_framework.authtoken import views
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 # from rest_framework_simplejwt.views import (
 #     TokenObtainPairView,
 #     TokenRefreshView,
