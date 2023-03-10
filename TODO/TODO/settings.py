@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework_simplejwt.token_blacklist',
     'drf_yasg',
+    'graphene_django',
 ]
 
 MIDDLEWARE = [
@@ -143,6 +144,9 @@ STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'users.TodoUser'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+GRAPHENE = {
+    'SCHEMA': 'TODO.schema.schema'
+}
 
 # from rest_framework.permissions import DjangoModelPermissionsOrAnonReadOnly
 
