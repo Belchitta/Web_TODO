@@ -51,7 +51,11 @@ INSTALLED_APPS = [
     'TodoLists',
     'corsheaders',
     'rest_framework.authtoken',
+<<<<<<< HEAD
     # 'rest_framework_simplejwt.token_blacklist',
+=======
+    'rest_framework_simplejwt.token_blacklist',
+>>>>>>> parent of b0be2de... Lesson_9_Done
 ]
 
 MIDDLEWARE = [
@@ -138,6 +142,13 @@ AUTH_USER_MODEL = 'users.TodoUser'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
+<<<<<<< HEAD
+=======
+    'DEFAULT_RENDERER_CLASSES': (
+        'djangorestframework_camel_case.render.CamelCaseJSONRenderer',
+        'djangorestframework_camel_case.render.CamelCaseBrowsableAPIRenderer',
+    ),
+>>>>>>> parent of b0be2de... Lesson_9_Done
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ],
@@ -145,6 +156,7 @@ REST_FRAMEWORK = {
         'rest_framework.renders.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer'
     ],
+<<<<<<< HEAD
     'DEFAULT_PARSER_CLASSES': [
         'djangorestframework_camel_case.parser.CamelCaseFormParser',
         'djangorestframework_camel_case.parser.CamelCaseMultiPartParser',
@@ -159,4 +171,14 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         # 'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
+=======
+
+    'DEFAULT_PARSER_CLASSES': (
+        'djangorestframework_camel_case.parser.CamelCaseFormParser',
+        'djangorestframework_camel_case.parser.CamelCaseMultiPartParser',
+        'djangorestframework_camel_case.parser.CamelCaseJSONParser',
+    ),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+>>>>>>> parent of b0be2de... Lesson_9_Done
 }
