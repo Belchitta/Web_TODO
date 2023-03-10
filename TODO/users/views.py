@@ -3,7 +3,7 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.renderers import JSONRenderer, AdminRenderer
 from rest_framework.permissions import IsAdminUser, BasePermission
 from .models import TodoUser
-from .serializers import TodoUserModelSerializer
+from .serializers import TodoUserModelSerializer, TodoUserModelSerializerV2
 
 
 class TodoUserViewSet(mixins.ListModelMixin,
@@ -11,8 +11,13 @@ class TodoUserViewSet(mixins.ListModelMixin,
                       mixins.UpdateModelMixin,
                       viewsets.GenericViewSet):
     permission_classes = [BasePermission]
-    serializer_class = TodoUserModelSerializer
     queryset = TodoUser.objects.all()
+    serializer_class = TodoUserModelSerializer
+
+    def get_serializer_class(self):
+        if self.request.version == '1.2':
+            return TodoUserModelSerializerV2
+        return TodoUserModelSerializer
 
 
 class StaffOnly(BasePermission):
