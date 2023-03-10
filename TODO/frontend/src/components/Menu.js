@@ -1,11 +1,15 @@
 import React from 'react'
+<<<<<<< HEAD
+=======
 import {
     Link,Redirect
 } from "react-router-dom";
 
+>>>>>>> 61f256aea00144b6b28399642f06426cd796928f
 import {
-    Link
+    Link,Redirect
 } from "react-router-dom";
+
 
 function NavbarItem({name, href}) {
     return (
@@ -14,8 +18,12 @@ function NavbarItem({name, href}) {
           <Link className="nav-link" to={href}>{name}</Link>
 =======
         <li className="nav-item active">
+<<<<<<< HEAD
+          <a className="nav-link" to={href}>{name}</a>
+=======
             <Link className="nav-link" to={href}>{name}</Link>
 >>>>>>> main
+>>>>>>> 61f256aea00144b6b28399642f06426cd796928f
         </li>
     )
 }
@@ -30,6 +38,16 @@ export default function Navbar({navbarItems, auth, logout}) {
       login_button = <Link to='/login' className="btn btn-outline-success my-2 my-sm-0">Login</Link>
     }
     return (
+<<<<<<< HEAD
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                       <span class="navbar-brand mb-0 h1">TODO-Lists</span>
+                </div>
+                <div class="container-fluid_sec">
+                    <span class="navbar-brand mb-1 h1">About</span>
+                </div>
+            </nav>
+=======
 <<<<<<< HEAD
         <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a className="navbar-brand" href="#">Fixed navbar</a>
@@ -73,6 +91,7 @@ export default function Navbar({navbarItems, auth, logout}) {
             </div>
         </nav>
 >>>>>>> main
+>>>>>>> 61f256aea00144b6b28399642f06426cd796928f
     )
 }
 // export default Navbar
