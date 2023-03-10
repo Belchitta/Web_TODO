@@ -143,6 +143,8 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'users.TodoUser'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
+# from rest_framework.permissions import DjangoModelPermissionsOrAnonReadOnly
+
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'djangorestframework_camel_case.render.CamelCaseJSONRenderer',
