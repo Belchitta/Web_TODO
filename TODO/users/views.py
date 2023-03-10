@@ -11,14 +11,6 @@ class TodoUserViewSet(mixins.ListModelMixin,
                       mixins.UpdateModelMixin,
                       viewsets.GenericViewSet):
     permission_classes = [BasePermission]
-    queryset = TodoUser.objects.all()
-    serializer_class = TodoUserModelSerializer
-
-    def get_serializer_class(self):
-        if self.request.version == '1.2':
-            return TodoUserModelSerializerV2
-        return TodoUserModelSerializer
-    permission_classes = [IsAdminUser]
     serializer_class = TodoUserModelSerializer
     queryset = TodoUser.objects.all()
 
